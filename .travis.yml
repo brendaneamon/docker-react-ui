@@ -6,4 +6,4 @@ before_install:
   - docker build -t brendaneamon/docker-react-ui -f Dockerfile.dev .
 
 script:
-  - docker run brendaneamon/docker-react-ui npm test
+  - docker run brendaneamon/docker-react-ui CI=true npm test
