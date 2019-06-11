@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t brendaneamon/docker-react-ui -f Dockerfile.dev .
+
+script:
+  - docker run brendaneamon/docker-react-ui npm run test -- --coverage
